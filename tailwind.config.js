@@ -11,6 +11,9 @@ module.exports = {
         orbitron: ["var(--font-orbitron)"],
         spaceGrotesk: ["var(--font-space-grotesk)"],
       },
+      colors: {
+        blue: "#3B82F680"
+      },
     },
   },
   plugins: [],
