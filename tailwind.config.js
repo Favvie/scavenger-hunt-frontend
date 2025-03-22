@@ -7,11 +7,12 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        orbitron: ["var(--font-orbitron)"],
+        spaceGrotesk: ["var(--font-space-grotesk)"],
+      },
       colors: {
         blue: "#3B82F680"
-      },
-      fontFamily: {
-        orbitron: ['Orbitron', 'sans-serif'],
       },
     },
   },
