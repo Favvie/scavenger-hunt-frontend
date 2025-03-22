@@ -46,29 +46,34 @@ const FAQItem = ({ question, answer }) => {
 function FAQ() {
   const faqData = [
     {
-      question: "What is your return policy?",
+      question: "What is scavengerhunt?",
       answer:
         "We offer a 30-day money-back guarantee for all our products. If you're not satisfied with your purchase, you can return it within 30 days for a full refund.",
     },
     {
-      question: "How long does shipping take?",
+      question: "How do I get started?",
       answer:
         "Shipping typically takes 3-5 business days for domestic orders and 7-14 business days for international orders, depending on your location.",
     },
     {
-      question: "Do you offer international shipping?",
+      question: "What kind of challenges are available?",
       answer:
         "Yes, we ship to over 100 countries worldwide. Shipping costs and delivery times vary by location.",
     },
     {
-      question: "How can I track my order?",
+      question: "What are the NFT rewards?",
       answer:
         "Once your order ships, you'll receive a tracking number via email that you can use to monitor your package's delivery status.",
     },
     {
-      question: "What payment methods do you accept?",
+      question: "Do I need to pay to participate?",
       answer:
         "We accept all major credit cards (Visa, MasterCard, American Express), PayPal, and Apple Pay.",
+    },
+    {
+      question: "Which wallets are supported?",
+      answer:
+        "Once your order ships, you'll receive a tracking number via email that you can use to monitor your package's delivery status.",
     },
   ];
   return (
