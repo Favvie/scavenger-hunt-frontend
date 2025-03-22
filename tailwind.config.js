@@ -6,7 +6,14 @@ module.exports = {
     "./components/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        blue: "#3B82F680"
+      },
+      fontFamily: {
+        orbitron: ['Orbitron', 'sans-serif'],
+      },
+    },
   },
   plugins: [],
 };
