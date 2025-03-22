@@ -1,11 +1,8 @@
-import HeroSection from "./components/homepage/HeroSection"
-import Navbar from "./components/homepage/Navbar"
- 
+import HeroSection from "@/components/homepage/HeroSection";
 
 export default function Home() {
   return (
     <div>
-      <Navbar />
       <HeroSection />
     </div>
   );
