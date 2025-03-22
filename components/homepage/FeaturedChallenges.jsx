@@ -1,7 +1,7 @@
 import ChallengeCard from "../challenges/ChallengeCard";
-import image1 from "@/app/assets/futuristic-dj-using-virtual-reality-glasses-headline-party-play-music 2.svg";
-import image2 from "@/app/assets/futuristic-dj-using-virtual-reality-glasses-headline-party-play-music 3.svg";
-import image3 from "@/app/assets/sci-fi-fantasy-landscape 1.svg";
+import image1 from "@/public/images/futuristic-dj-using-virtual-reality-glasses-headline-party-play-music 2.svg";
+import image2 from "@/public/images/futuristic-dj-using-virtual-reality-glasses-headline-party-play-music 3.svg";
+import image3 from "@/public/images/sci-fi-fantasy-landscape 1.svg";
 const FeatureChallenges = () => {
   const challenges = [
     {
