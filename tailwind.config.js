@@ -6,7 +6,12 @@ module.exports = {
     "./components/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        orbitron: ["var(--font-orbitron)"],
+        spaceGrotesk: ["var(--font-space-grotesk)"],
+      },
+    },
   },
   plugins: [],
 };
