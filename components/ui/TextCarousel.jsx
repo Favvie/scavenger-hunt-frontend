@@ -1,39 +1,50 @@
 "use client";
-import React, {useEffect, useRef} from "react";
+import React, {useEffect, useState} from "react";
 
 const TextCarousel = () => {
-   const carouselRef = useRef(null);
+   const texts = ["Get rewarded while learning", "Build your skills and knowledge", "Explore multiple ecosystems"];
 
-   // Text items for the carousel
-   const texts = ["Welcome to our site!", "Explore our new features.", "Get started today!", "Join our community!", "Check out our blog!"];
+   const [currentIndex, setCurrentIndex] = useState(0);
+   const [isTransitioning, setIsTransitioning] = useState(false);
 
    useEffect(() => {
       const interval = setInterval(() => {
-         if (carouselRef.current) {
-            // Move the carousel content left
-            carouselRef.current.scrollLeft += 200; // Adjust this value based on your container width
-            // Loop back to the beginning when the end is reached
-            if (carouselRef.current.scrollLeft >= carouselRef.current.scrollWidth - carouselRef.current.clientWidth) {
-               carouselRef.current.scrollLeft = 0;
-            }
-         }
-      }, 3000); // Adjust the speed (time) for scrolling here
+         setIsTransitioning(true);
+         setTimeout(() => {
+            setCurrentIndex((prevIndex) => (prevIndex + 1) % texts.length);
+            setIsTransitioning(false);
+         }, 700);
+      }, 5000);
 
-      // Clean up the interval when the component unmounts
       return () => clearInterval(interval);
    }, []);
 
+   // Handle next and previous buttons
+   const goNext = () => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % texts.length);
+      setIsTransitioning(true);
+   };
+
+   const goPrev = () => {
+      setCurrentIndex((prevIndex) => (prevIndex - 1 + texts.length) % texts.length);
+      setIsTransitioning(true);
+   };
    return (
-      <div className="Orbitron text-white text-center font-[ 600] text-[32px]">
-         {" "}
-         <div className="w-full overflow-hidden flex justify-center items-center bg-[#060B1C] py-4">
-            <div className="flex space-x-8 transition-transform duration-1000 ease-in-out" ref={carouselRef}>
-               {texts.map((text, index) => (
-                  <div key={index} className="px-8 py-4 bg-[#3B82F6] text-white font-semibold text-lg rounded-md">
-                     <p>{text}</p>
-                  </div>
-               ))}
-            </div>
+      <div className="Orbitron text-white text-center font-[600] text-[32px]">
+         <h1 className={`transition-opacity duration-1000 ease-in-out  ${isTransitioning ? "opacity-0" : "opacity-100"}`}>{texts[currentIndex]}</h1>
+         <div className="flex flex-row justify-center gap-4 mt-4">
+            <button
+               className={`w-[55px] border-[3px] ${currentIndex === 0 ? "border-[#E9E9E9]" : "border-[#858894]"} border-solid rounded-full `}
+               onClick={() => setCurrentIndex(0)}
+            ></button>{" "}
+            <button
+               className={`w-[55px] border-[3px] ${currentIndex === 1 ? "border-[#E9E9E9]" : "border-[#858894]"} border-solid rounded-full `}
+               onClick={() => setCurrentIndex(1)}
+            ></button>{" "}
+            <button
+               className={`w-[55px] border-[3px] ${currentIndex === 2 ? "border-[#E9E9E9]" : "border-[#858894]"} border-solid rounded-full `}
+               onClick={() => setCurrentIndex(2)}
+            ></button>
          </div>
       </div>
    );

@@ -11,6 +11,7 @@ import BackButton from "@/components/ui/BackButton";
 import {Formik, useFormik} from "formik";
 import Button from "@/components/ui/Button";
 import Link from "next/link";
+import mobilebackground from "@/public/images/mobilebackground.svg";
 
 const Page = () => {
    const [Error, setError] = useState(false);
@@ -37,18 +38,21 @@ const Page = () => {
       }
    }, [values.Password]);
    return (
-      <div className="w-full min-h-screen grid grid-cols-1 lg:grid-cols-2 gap-0">
+      <div className="w-full min-h-screen grid grid-cols-1 lg:grid-cols-2 gap-0 relative">
          <section className=" hidden lg:flex h-full relative">
             <div className="absolute top-[59px] left-[90px] z-40">
                <BackButton />
             </div>
             <Image src={background} alt="background" className="z-0 brightness-75" objectFit="cover" objectPosition="top center" fill priority sizes="100vw" />
-            {/* <div className="absolute bottom-8 right-0 left-0 w-full border">
+            <div className="absolute bottom-12 right-0 left-0 w-full">
                <TextCarousel />
-            </div> */}
+            </div>
          </section>
+         {/*  */}
          <section className=" bg-[#060B1C] py-16 px-8 lg:px-16 xl:px-28">
-            <div className=" flex flex-col items-center gap-6">
+            <Image src={mobilebackground} alt="background" className="lg:hidden absolute brightness-50 z-20" objectFit="cover" objectPosition="top center" fill priority sizes="100vw" />
+
+            <div className=" flex flex-col items-center gap-6 z-40">
                <FormIntro title={"Sign up"} description={"Join thousands of learners exploring blockchain ecosystems, completing challenges, and earning NFT rewards."} />
                <div className="flex flex-row items-center gap-4">
                   <GoogleSignInButton />
@@ -84,7 +88,7 @@ const Page = () => {
                   <Input type={"email"} name={"Email"} label={"Email"} placeholder={"Johndoe@gmail.com"} value={values.Email} onChange={handleChange} required={true} />
                   <Input type={"password"} name={"Password"} label={"Password"} placeholder={"Password"} value={values.Password} onChange={handleChange} required={true} />
                   <p className="text-[#F93232] space-grotesk font-[500] text-[14px]">{Error ? "Must be atleast 8 characters" : ""}</p>
-                  <div className="mt-6 flex flex-col gap-4">
+                  <div className="mt-6 flex flex-col gap-4 z-40">
                      <Button variant="gradient" className="Orbitron font-[500] text-[20px] h-[50px] flex flex-col items-center justify-center">
                         Sign Up
                      </Button>
