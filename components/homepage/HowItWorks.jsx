@@ -44,7 +44,7 @@ const HowItWorks = () => {
   ];
 
   return (
-    <section className="pt-8 sm:pt-12 md:pt-16 pb-6 bg-gradient-to-br from-purple-950 via-purple-900 to-indigo-950 text-white">
+    <section className="pt-8 sm:pt-12 md:pt-16 pb-6  text-white">
       <div className="container mx-auto pb-8 sm:pb-12 md:pb-16 px-4 sm:px-6 md:px-12 lg:px-24">
         <header className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-4 text-center mb-10 sm:mb-16 md:mb-24">
           <div className="hidden mr-6 sm:block bg-[#858894] w-20 md:w-24 h-px"></div>
