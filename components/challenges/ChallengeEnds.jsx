@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Button from "../ui/Button";
 
 function ChallengeEnds() {
@@ -13,7 +14,7 @@ function ChallengeEnds() {
         </div>
         <div className="md:pl-16 pl-8 pt-3 flex flex-col ">
           <h3 className="font-semibold md:text-4xl text-lg">Win our featured NFT</h3>
-          <p className="font-normal md:text-xl text-sm text-[#BFBFBF] my-2">
+          <p className="font-normal md:text-xl space-grotesk text-sm text-[#BFBFBF] my-2">
             Demonstate your proficiency in Steller
             <br /> with our most difficult challnge
           </p>
@@ -32,11 +33,14 @@ function ChallengeEnds() {
         </div>
       </div>
       <div className="w-1/2 h-[454px] pl-28 md:block hidden ">
-        <img
-          src="/images/robot.png"
-          alt=""
-          className="size-[454px] -mt-[5.5rem] "
-        />
+      <Image
+  src="/images/robot.png"
+  alt="Robot"
+  width={454}
+  height={454}
+  className="-mt-[5rem]"
+  priority
+/>
       </div>
       <div></div>
     </main>

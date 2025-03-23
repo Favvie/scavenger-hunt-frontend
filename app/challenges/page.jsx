@@ -77,7 +77,7 @@ const ecosystems = ["All", ...new Set(dummyChallenges.map((c) => c.ecosystem))];
 function page() {
   return (
     <>
-      <section className="relative w-full   flex flex-col md:pt-40 pt-32 px-6 md:px-12 bg-black text-white overflow-hidden">
+      <section className="relative w-full   flex flex-col md:pt-40 pt-32 px-6 md:px-12 bg-black text-white overflow-hidden Orbitron">
         <div className="text-center ">
           <h1 className="font-semibold lg:text-[64px] sm:text-[48px] text-[24px]">
             Challenges <br />{" "}
@@ -87,7 +87,7 @@ function page() {
           </h1>
         </div>
       </section>
-      <section className="relative w-full   flex flex-col items-center  md:pt-24 pt-12 px-6 md:px-12 bg-black text-white ">
+      <section className="relative w-full  flex flex-col items-center  md:pt-24 pt-12 px-6 md:px-12 bg-black text-white Orbitron ">
         <Tabs className="w-full  " defaultValue="All">
           <div className="w-full  flex justify-center items-center">
 
@@ -96,7 +96,7 @@ function page() {
               <TabsTrigger
                 key={eco}
                 value={eco}
-                className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-[#7D3EAF] data-[state=active]:to-[#E7499F] data-[state=active]:text-white text-white md:h-[40px] h-5 md:w-[200px]  font-medium md:text-xl text-xs"
+                className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-[#7D3EAF] data-[state=active]:to-[#E7499F] data-[state=active]:text-white text-white md:h-[40px] h-5  rounded-xl  font-medium md:text-xl text-xs"
               >
                 {eco}
               </TabsTrigger>
@@ -109,8 +109,8 @@ function page() {
           </div>
 
           {ecosystems.map((eco) => (
-            <TabsContent key={eco} value={eco} className="md:mt-32 mt-16 pb-8">
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-9 md:w-[1240px] mx-auto ">
+            <TabsContent key={eco} value={eco} className="md:mt-32 mt-16 pb-8  ">
+              <div className="flex flex-wrap gap-4 lg:w-[1240px] justify-center gap-y-4 w-full md:mx-auto ">
                 {dummyChallenges
                   .filter(
                     (challenge) => eco === "All" || challenge.ecosystem === eco
