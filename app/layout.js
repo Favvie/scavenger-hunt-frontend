@@ -1,6 +1,5 @@
 import "./globals.css";
-// import Navbar from "@/components/homepage/Navbar"; Imported twice
-import localFont from "next/font/local";
+
 import { Space_Grotesk, Orbitron } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/homepage/Navbar";
