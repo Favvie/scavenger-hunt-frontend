@@ -1,4 +1,3 @@
-// components/homepage/StepCard.jsx
 import React from "react";
 import Image from "next/image";
 
@@ -29,7 +28,6 @@ const Card = ({ card }) => {
   );
 };
 
-// Main StepCard component
 const StepCard = ({ step, isEven, className = "", index }) => {
   return (
     <div
@@ -37,10 +35,10 @@ const StepCard = ({ step, isEven, className = "", index }) => {
         isEven || index === 0 || index === 2 ? "flex-col-reverse" : "flex-col"
       } ${!isEven ? "md:flex-row-reverse" : "md:flex-row"} items-center gap-16 ${className}`}
     >
-      {/* Step Number */}
+  
       <div
         className={`
-          flex items-center justify-center w-[80px] h-[80px] rounded-full bg-blue-500  text-white font-bold text-[36px]
+          flex items-center justify-center text-[24px]  w-[40px] h-[40px] rounded-full bg-blue  text-white font-bold md:text-[36px] md:w-[60px] md:h-[60px]
           md:absolute md:left-1/2 md:transform md:-translate-x-1/2 md:top-0
           absolute top-0 left-0 z-10
         `}
@@ -48,7 +46,7 @@ const StepCard = ({ step, isEven, className = "", index }) => {
         {step.id}
       </div>
 
-      {/* Text Section */}
+ 
       <div
         className={`md:w-1/2 flex flex-col flex-grow justify-center items-start h-full px-[48px] mt-10 md:mt-0`}
       >
@@ -57,7 +55,7 @@ const StepCard = ({ step, isEven, className = "", index }) => {
         <p className="text-[#BFBFBF] text-sm ">{step.description2}</p>
       </div>
 
-      {/* Image Section */}
+  
       <div
         className={`md:w-1/2 flex flex-grow justify-center relative ${
           !isEven ? "md:justify-start" : "md:justify-center"

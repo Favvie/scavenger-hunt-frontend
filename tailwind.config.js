@@ -9,6 +9,7 @@ module.exports = {
       backgroundImage: {
         "how-it-works": "url('/images/howitworks.png')",
         "how-footer": "url('/images/howfooter.png')",
+      },
       fontFamily: {
         orbitron: ["var(--font-orbitron)"],
         spaceGrotesk: ["var(--font-space-grotesk)"],
