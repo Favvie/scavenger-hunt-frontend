@@ -75,7 +75,10 @@ function TestimonialCard({ testimonial, isMobile = false }) {
           <div className="flex relative flex-col items-center mb-4">
             <div
               className="w-20  border-[8px] absolute h-20 translate-y-[-80%] rounded-full flex items-center justify-center mb-3"
-              style={{ backgroundColor: testimonial.avatarBg,  borderColor: testimonial.border }}
+              style={{
+                backgroundColor: testimonial.avatarBg,
+                borderColor: testimonial.border,
+              }}
             >
               <Image
                 src={testimonial.avatarUrl}
@@ -99,11 +102,8 @@ function TestimonialCard({ testimonial, isMobile = false }) {
 
           <div className="flex justify-center">
             {Array.from({ length: testimonial.rating }).map((_, i) => (
-              // biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
-              // biome-ignore lint/a11y/noSvgWithoutTitle: <explanation>
               <svg
-                // biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
-                key={i}
+                key={i} // Using index as key (okay for static lists)
                 className="w-5 h-5 text-yellow-400 fill-current"
                 viewBox="0 0 24 24"
               >
@@ -142,7 +142,6 @@ function TestimonialCard({ testimonial, isMobile = false }) {
           <div className="flex justify-center">
             {Array.from({ length: testimonial.rating }).map((_, i) => (
               <svg
-                // biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
                 key={i}
                 className="w-5 h-5 text-yellow-400 fill-current"
                 viewBox="0 0 24 24"
@@ -305,7 +304,7 @@ export default function Testimonial() {
   const pageCount = Math.ceil(testimonials.length / itemsPerPage);
 
   //this function makes it auto slide every 4 seconds if its on mobile
-  // biome-ignore lint/correctness/useExhaustiveDependencies: <explanation>
+
   useEffect(() => {
     setActiveIndex(0); // Reset index on screen size change
   }, [screenSize]);
@@ -368,7 +367,6 @@ export default function Testimonial() {
               <div className="flex justify-center gap-3 mt-8">
                 {testimonials.map((_, index) => (
                   <button
-                    // biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
                     key={index}
                     type="button"
                     onClick={() => setActiveIndex(index)}
