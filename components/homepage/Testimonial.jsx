@@ -102,13 +102,14 @@ function TestimonialCard({ testimonial, isMobile = false }) {
 
           <div className="flex justify-center">
             {Array.from({ length: testimonial.rating }).map((_, i) => (
-              <svg
-                key={i} // Using index as key (okay for static lists)
-                className="w-5 h-5 text-yellow-400 fill-current"
-                viewBox="0 0 24 24"
-              >
-                <path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z" />
-              </svg>
+             <svg
+             key={`${testimonial.id}-${i}`} // Unique key based on the testimonial
+             className="w-5 h-5 text-yellow-400 fill-current"
+             viewBox="0 0 24 24"
+           >
+             <path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z" />
+           </svg>
+           
             ))}
           </div>
         </>
