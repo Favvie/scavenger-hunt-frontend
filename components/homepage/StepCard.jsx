@@ -31,9 +31,9 @@ const Card = ({ card }) => {
 const StepCard = ({ step, isEven, className = "", index }) => {
   return (
     <div
-      className={`relative flex ${
+      className={`relative sm:px-12  flex ${
         isEven || index === 0 || index === 2 ? "flex-col-reverse" : "flex-col"
-      } ${!isEven ? "md:flex-row-reverse" : "md:flex-row"} items-center gap-16 ${className}`}
+      } ${!isEven ? "md:flex-row-reverse" : "md:flex-row"} items-center  md:gap-16 ${className}`}
     >
   
       <div
@@ -48,7 +48,7 @@ const StepCard = ({ step, isEven, className = "", index }) => {
 
  
       <div
-        className={`md:w-1/2 flex flex-col flex-grow justify-center items-start h-full px-[48px] mt-10 md:mt-0`}
+        className={`md:w-1/2 flex flex-col flex-grow justify-center items-start h-full md:px-[48px] mt-6 md:mt-0`}
       >
         <h2 className="text-2xl text-[#E9E9E9] font-bold mb-4">{step.title}</h2>
         <p className="text-[#BFBFBF] text-sm  mb-2">{step.description}</p>
@@ -65,7 +65,7 @@ const StepCard = ({ step, isEven, className = "", index }) => {
           src={`/images/${step.img}`}
           width={400}
           height={400}
-          className=""
+          className=" "
           alt={step.title}
         />
       </div>

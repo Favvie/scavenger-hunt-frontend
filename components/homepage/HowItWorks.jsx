@@ -44,17 +44,17 @@ const HowItWorks = () => {
   ];
 
   return (
-    <section className="pt-8 sm:pt-12 md:pt-16 pb-6  text-white">
-      <div className="container mx-auto pb-8 sm:pb-12 md:pb-16 px-4 sm:px-6 md:px-12 lg:px-24">
+    <section className="pt-8 sm:pt-12  md:pt-16 pb-6 bg-gradient-to-br  text-white">
+      <div className="container mx-auto pb-8 sm:pb-12 md:pb-16 px-12 sm:px-6 md:px-12 lg:px-24">
         <header className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-4 text-center mb-10 sm:mb-16 md:mb-24">
           <div className="hidden mr-6 sm:block bg-[#858894] w-20 md:w-24 h-px"></div>
           <div className="max-w-md">
-            <h1 className="text-[#E9E9E9]  sm:text-2xl md:text-[28px] font-bold mb-1 sm:mb-2">
-              Learning has never been more
+            <h1 className="text-[#E9E9E9] sm:px-6 sm:text-2xl md:text-[28px] font-bold mb-1 sm:mb-2">
+              <span className="font-bold mb-2 sm:mb-4 text-2xl sm:text-2xl md:text-[28px] inline   md:block">Learning has never been more</span>
+              <span className="font-bold mb-2 sm:mb-4 text-2xl sm:text-2xl md:text-[28px] text-transparent bg-clip-text bg-gradient-to-r from-[#7D3EAF] to-[#E7499F] ml-2 md:ml-0">
+                how it works
+              </span>
             </h1>
-            <p className="font-bold mb-2 sm:mb-4 text-2xl sm:text-3xl md:text-4xl text-transparent bg-clip-text bg-gradient-to-r from-[#7D3EAF] to-[#E7499F]">
-              how it works
-            </p>
             <p className="text-[#858894] text-sm sm:text-base md:text-[16px]">
               Join and make use of the platform in 4 simple steps
             </p>
@@ -63,7 +63,7 @@ const HowItWorks = () => {
         </header>
 
         {/* Steps Section with Vertical Line */}
-        <div className="relative flex flex-col gap-10 sm:gap-16 md:gap-20">
+        <div className="relative flex flex-col  gap-20 sm:gap-16 md:gap-20 px-0">
           <div
             className="absolute left-1/2 top-8 bottom-0 w-px bg-[#858894] transform -translate-x-1/2 hidden md:block"
             aria-hidden="true"
@@ -82,8 +82,8 @@ const HowItWorks = () => {
 
       {/* Call to Action */}
       <div className="text-center py-8 mt-6 sm:mt-8 md:mt-10 px-4 sm:px-6 
-                     bg-how-footer md:bg-how-it-works bg-center bg-no-repeat 
-                     bg-cover md:py-10">
+                     bg-[url('/images/howfooter.png')] md:bg-[url('/images/howitworks.png')] 
+                     bg-center bg-no-repeat bg-cover md:py-10 ">
         <h2 className="text-xl sm:text-2xl md:text-[32px] font-bold">
           Dive into the world of blockchain
         </h2>
@@ -95,8 +95,8 @@ const HowItWorks = () => {
         </p>
         <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-6 px-4">
           <Button
-            variant="secondary"
-            className=" md:w-auto py-2 px-4 sm:py-3 sm:px-6 md:py-4 md:px-20 bg-gradient-to-r from-[#7D3EAF] to-[#E7499F]"
+            variant="gradient"
+            className=" !rounded-2xl md:w-auto  px-4 sm:py-3 sm:px-6 md:py-4 md:px-20"
             aria-label="Join a challenge"
           >
             Join a challenge
@@ -104,7 +104,7 @@ const HowItWorks = () => {
               
           <Button
             variant="secondary"
-            className=" md:w-auto py-2 px-4 sm:py-3 sm:px-10 md:py-4 md:px-20 bg-[#E68AAF1F]"
+            className=" !rounded-2xl bg-[#40234E] md:w-auto  px-4 sm:py-3 sm:px-10 md:py-4 md:px-20 bg-opacity-20"
             aria-label="Learn how to play"
           >
             Learn how to play
