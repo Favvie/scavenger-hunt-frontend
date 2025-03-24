@@ -10,7 +10,7 @@ const Button = ({children, variant = "primary", className = "", onClick, ...prop
    };
 
    // Base button styles + variant-specific styles + any custom classes
-   const buttonClasses = `px-8 py-4 rounded-lg font-medium transition-colors ${variants[variant]} ${className}`;
+   const buttonClasses = `px-8 py-4 rounded-[10px] font-medium transition-colors ${variants[variant]} ${className}`;
 
    return (
       <button className={buttonClasses} onClick={onClick} {...props}>
