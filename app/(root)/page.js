@@ -1,6 +1,6 @@
 import HeroSection from "@/components/homepage/HeroSection";
-import FeatureChallenges from "../components/homepage/FeaturedChallenges";
-import Testimonial from "../components/homepage/Testimonial"
+import FeatureChallenges from "@/components/homepage/FeaturedChallenges";
+import Testimonial from "@/components/homepage/Testimonial";
 
 export default function Home() {
   return (

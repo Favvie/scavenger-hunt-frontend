@@ -29,7 +29,7 @@ const Navbar = () => {
         <Link href="#" className="hover:text-pink-500">
           Contact Us
         </Link>
-        <Link href="#" className="hover:text-pink-500 mr-4">
+        <Link href="/sign-in" className="hover:text-pink-500 mr-4">
           Sign In
         </Link>
         <button className="px-6 py-2 bg-[#d946ef] text-white rounded-lg hover:bg-[#c084fc] transition-all">
@@ -57,7 +57,7 @@ const Navbar = () => {
           <Link href="#" className="text-lg text-white hover:text-pink-500">
             Contact Us
           </Link>
-          <Link href="#" className="text-lg text-white hover:text-pink-500">
+          <Link href="/sign-in" className="text-lg text-white hover:text-pink-500">
             Sign In
           </Link>
           <button className="w-full px-5 py-2 bg-[#d946ef] text-white rounded-lg hover:bg-[#c084fc] transition-all">
