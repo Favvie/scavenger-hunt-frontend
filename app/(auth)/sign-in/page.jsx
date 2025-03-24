@@ -18,8 +18,8 @@ import EmailSentPopup from "@/components/ui/EmailSentPopup";
 const Page = () => {
    const [error, setError] = useState(false);
    const [showForgotPassword, setShowForgotPassword] = useState(false);
-   const [showEmailSent, setShowEmailSent] = useState(false); // State for EmailSentPopup
-   const [email, setEmail] = useState(""); // State to store the email
+   const [showEmailSent, setShowEmailSent] = useState(false);
+   const [email, setEmail] = useState(""); 
 
    const formik = useFormik({
       initialValues: {
@@ -43,19 +43,18 @@ const Page = () => {
       }
    }, [values.Password]);
 
-   // Handler to open EmailSentPopup and close ForgotPasswordPopup
    const handleEmailSent = (submittedEmail) => {
-    setEmail(submittedEmail); // Store the email
-    setShowForgotPassword(false); // Close ForgotPasswordPopup
-    setShowEmailSent(true); // Open EmailSentPopup
+    setEmail(submittedEmail); 
+    setShowForgotPassword(false); 
+    setShowEmailSent(true); 
  };
 
- // Handler to resend email (for now, just logs to console)
+ 
  const handleResendEmail = () => {
     console.log(`Resending email to ${email}`);
  };
 
- // Handler to change email (reopens ForgotPasswordPopup)
+ 
  const handleChangeEmail = () => {
     setShowEmailSent(false);
     setShowForgotPassword(true);
@@ -63,13 +62,11 @@ const Page = () => {
 
    return (
       <div className="relative bg-[#060B1C]">
-         {/* Page Content with Blur */}
          <div
             className={`w-full min-h-screen grid grid-cols-1 lg:grid-cols-2 gap-0 relative bg-[#060B1C] ${
                showForgotPassword || showEmailSent ? "blur-md" : ""
             }`}
          >
-            {/* Background Section */}
             <section className="hidden lg:flex h-full relative">
                <div className="absolute top-[59px] left-[90px] z-50">
                   <BackButton />
@@ -89,7 +86,6 @@ const Page = () => {
                </div>
             </section>
 
-            {/* Sign-In Section */}
             <section className="bg-[#060B1C] py-16 px-8 lg:px-16 xl:px-28 relative">
                <Image
                   src={mobilebackground}
@@ -169,14 +165,12 @@ const Page = () => {
             </section>
          </div>
 
-         {/* Render the Forgot Password Pop-Up */}
          <ForgotPasswordPopup
             isOpen={showForgotPassword}
             onClose={() => setShowForgotPassword(false)}
-            onEmailSent={handleEmailSent} // Pass handler to trigger EmailSentPopup
+            onEmailSent={handleEmailSent}
          />
 
-         {/* Render the Email Sent Pop-Up */}
          <EmailSentPopup
             isOpen={showEmailSent}
             onClose={() => setShowEmailSent(false)}
