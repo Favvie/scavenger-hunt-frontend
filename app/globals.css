@@ -1,6 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
 
 /* 
 @font-face {
@@ -11,11 +15,25 @@
 } */
 
 @font-face {
-    font-family: 'Orbitron';
-    src: url('./fonts/Orbitron-Regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+   font-family: "Orbitron";
+   src: url("./fonts/Orbitron-Regular.ttf") format("truetype");
+   font-weight: normal;
+   font-style: normal;
 }
+@font-face {
+   font-family: "Space Grotesk";
+   src: url("./fonts/SpaceGrotesk-Regular.ttf") format("truetype");
+   font-weight: normal;
+   font-style: normal;
+}
+.Orbitron {
+   font-family: "Orbitron", sans-serif;
+}
+.space-grotesk {
+   font-family: "Space Grotesk", sans-serif;
+}
+
+
 /* 
 @font-face {
     font-family: 'Orbitron';
