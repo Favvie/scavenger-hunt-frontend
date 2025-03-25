@@ -7,13 +7,11 @@ export default function Home() {
     <>
       <div>
         <HeroSection />
-        <div className="w-full min-h-full bg-black pb-[40px]" >
+        <div className="w-full min-h-full bg-black pb-[40px]">
           <FeatureChallenges />
-          <Testimonial  />
+          <Testimonial />
         </div>
       </div>
-
-
     </>
   );
 }

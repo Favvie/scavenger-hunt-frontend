@@ -1,6 +1,4 @@
-
 import "./globals.css";
-
 
 import { Space_Grotesk, Orbitron } from "next/font/google";
 import "./globals.css";
@@ -19,8 +17,8 @@ const orbitron = Orbitron({
 });
 
 export const metadata = {
-   title: "Scavenger Hunt",
-   description: "Learn about the countless blockchain ecosystems",
+  title: "Scavenger Hunt",
+  description: "Learn about the countless blockchain ecosystems",
 };
 
 export default function RootLayout({ children }) {
@@ -33,5 +31,4 @@ export default function RootLayout({ children }) {
       </body>
     </html>
   );
-
 }

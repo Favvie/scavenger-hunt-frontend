@@ -1,4 +1,3 @@
-/** @type {import('tailwindcss').Config} */
 module.exports = {
     darkMode: ["class"],
     content: [
@@ -7,6 +6,19 @@ module.exports = {
     "./components/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
+    extend: {
+      backgroundImage: {
+        "how-it-works": "url('/images/howitworks.png')",
+        "how-footer": "url('/images/howfooter.png')",
+      },
+      fontFamily: {
+        orbitron: ["var(--font-orbitron)"],
+        spaceGrotesk: ["var(--font-space-grotesk)"],
+      },
+      colors: {
+        blue: "#3B82F680"
+      },
+    },
   	extend: {
   		fontFamily: {
   			orbitron: [
@@ -68,3 +80,4 @@ module.exports = {
   },
   plugins: [require("tailwindcss-animate")],
 };
+

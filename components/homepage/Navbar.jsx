@@ -1,10 +1,21 @@
 "use client";
+
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { SelectWallet } from "../wallet/SelectWallet";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [showWalletModal, setShowWalletModal] = useState(false);
+
+  const handleConnectWallet = () => {
+    setShowWalletModal(true);
+  };
+
+  const handleCloseModal = () => {
+    setShowWalletModal(false);
+  };
 
   return (
     <nav className="w-full fixed top-0 left-0 bg-transparent px-6 md:px-12 py-5 flex items-center justify-between z-50">
@@ -32,7 +43,10 @@ const Navbar = () => {
         <Link href="/sign-in" className="hover:text-pink-500 mr-4">
           Sign In
         </Link>
-        <button className="px-6 py-2 bg-[#d946ef] text-white rounded-lg hover:bg-[#c084fc] transition-all">
+        <button
+          className="px-6 py-2 bg-[#d946ef] text-white rounded-lg hover:bg-[#c084fc] transition-all"
+          onClick={handleConnectWallet}
+        >
           Connect Wallet
         </button>
       </div>
@@ -60,11 +74,17 @@ const Navbar = () => {
           <Link href="/sign-in" className="text-lg text-white hover:text-pink-500">
             Sign In
           </Link>
-          <button className="w-full px-5 py-2 bg-[#d946ef] text-white rounded-lg hover:bg-[#c084fc] transition-all">
+          <button
+            className="w-full px-5 py-2 bg-[#d946ef] text-white rounded-lg hover:bg-[#c084fc] transition-all"
+            onClick={handleConnectWallet}
+          >
             Connect Wallet
           </button>
         </div>
       )}
+
+      {/* Wallet Modal */}
+      {showWalletModal && <SelectWallet onClose={handleCloseModal} />}
     </nav>
   );
 };
