@@ -1,4 +1,3 @@
-/** @type {import('tailwindcss').Config} */
 module.exports = {
   darkMode: ["class"],
   content: [
@@ -8,6 +7,10 @@ module.exports = {
   ],
   theme: {
     extend: {
+      backgroundImage: {
+        "how-it-works": "url('/images/howitworks.png')",
+        "how-footer": "url('/images/howfooter.png')",
+      },
       fontFamily: {
         orbitron: ["var(--font-orbitron)"],
         spaceGrotesk: ["var(--font-space-grotesk)"],
