@@ -23,7 +23,10 @@ const LeaderBoard = ({ slice, players }) => {
 
         <div className="mt-6 space-y-4">
           {players.map((player, index) => (
-            <div className="bg-[#0f111e] p-6 rounded-[10px]" key={index}>
+            <div
+              className="bg-[#0f111e] py-[14px] px-[22px] rounded-[10px]"
+              key={index}
+            >
               <div className="text-sm border-[1px] border-[#FFFFFF03] rounded-[10px] grid grid-cols-4 items-center">
                 <div className="flex items-center justify-start space-x-2">
                   <span className="text-sm font-medium">{player.id}</span>

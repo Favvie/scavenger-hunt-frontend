@@ -17,6 +17,7 @@ import ChallengeCard from "@/components/challenges/ChallengeCard";
 import SubheadingLeft from "@/components/SubheadingLeft";
 import TextWithIcon from "@/components/ui/TextWithIcon";
 import LeaderBoard from "@/components/Leaderboard";
+import StateDifficulty from "@/components/StateDifficulty";
 
 function Page({ params }) {
   const [challenge, setChallenge] = useState(null);
@@ -71,21 +72,10 @@ function Page({ params }) {
                 className=""
               />
               <div className="flex flex-col gap-[14px]">
-                <div className="flex items-center justify-start gap-5">
-                  <p
-                    className={`rounded-lg text-texts-important py-1 px-4 bg-[#637C78] font-bold text-xs font-orbitron`}
-                  >
-                    <span
-                      className={`inline-block mr-2 w-2 h-2 rounded-full bg-[#439F6E]`}
-                    ></span>
-                    {titleCase(challenge.status)}
-                  </p>
-                  <p
-                    className={`rounded-lg py-1 px-8 text-[#F93232] bg-[#83717A] font-bold text-xs font-orbitron`}
-                  >
-                    {titleCase(challenge.level)}
-                  </p>
-                </div>
+                <StateDifficulty
+                  status={challenge.status}
+                  level={challenge.level}
+                />
                 <h1 className="text-3xl font-semibold font-orbitron">
                   {challenge.title}
                 </h1>
@@ -156,7 +146,10 @@ function Page({ params }) {
                 ))}
               </div>
 
-              <LeaderBoard slice={5} players={LEADER_BOARD} />
+              {(challenge.status.toLowerCase() === "active" ||
+                challenge.status.toLowerCase() === "ended") && (
+                <LeaderBoard slice={5} players={LEADER_BOARD} />
+              )}
             </div>
 
             <div className="max-w-[25%]">
@@ -179,7 +172,7 @@ function Page({ params }) {
                         status={c.status}
                         players={c.players}
                         timeLeft={c.daysLeft}
-                        image={c.image}
+                        image={c.thumbnail ?? c.image}
                         nftType={c.nftType}
                       />
                     </li>

@@ -65,7 +65,9 @@ const ChallengeCard = ({
                     bigCard && "lg:text-[14px] w-auto"
                   }`}
                 >
-                  {description}
+                  {`${description.slice(0, 70)}${
+                    description.length > 70 ? "..." : ""
+                  }`}
                 </p>
               </div>
               <section className="w-full flex items-center justify-between mt-[14px] -bottom-3 relative">
