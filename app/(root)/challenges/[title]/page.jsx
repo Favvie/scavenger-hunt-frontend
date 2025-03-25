@@ -72,7 +72,7 @@ function Page({ params }) {
                 height={120}
                 className=""
               />
-              <div className="flex flex-col gap-[14px]">
+              <div className="w-full flex flex-col gap-[14px]">
                 <StateDifficulty
                   status={challenge.status}
                   level={challenge.level}
