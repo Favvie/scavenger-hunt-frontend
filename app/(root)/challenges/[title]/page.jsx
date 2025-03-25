@@ -18,6 +18,7 @@ import SubheadingLeft from "@/components/SubheadingLeft";
 import TextWithIcon from "@/components/ui/TextWithIcon";
 import LeaderBoard from "@/components/Leaderboard";
 import StateDifficulty from "@/components/StateDifficulty";
+import Footer from "@/components/homepage/Footer";
 
 function Page({ params }) {
   const [challenge, setChallenge] = useState(null);
@@ -44,11 +45,11 @@ function Page({ params }) {
   }
 
   return (
-    <div className="bg-[#121727] h-full pb-20 pt-40">
-      <section className="relative  rounded-[30px] flex flex-col mx-auto max-w-[1053px] items-center justify-start bg-black text-white">
+    <div className="bg-[#121727] h-full pt-24 pb-10 mb:pb-20 md:pt-40">
+      <section className="relative rounded-[30px] flex flex-col mx-auto max-w-[1053px] items-center justify-start md:bg-black text-white">
         <Link
           href="/challenges"
-          className="absolute top-0 left-0 translate-x-10 translate-y-10"
+          className="absolute top-0 left-0 hidden translate-x-10 translate-y-10 md:block"
         >
           <BackButton />
         </Link>
@@ -57,11 +58,11 @@ function Page({ params }) {
           alt={challenge.title}
           width={1053}
           height={420}
-          className="m-auto max-h-[420px]"
+          className="hidden md:block m-auto max-h-[420px]"
         />
-        <div className="w-full px-6 py-4 md:px-11 md:py-8">
-          <div className="flex items-center justify-between w-full ">
-            <div className="flex items-center justify-between gap-10">
+        <div className="w-full px-3 py-4 md:px-11 md:py-8">
+          <div className="flex flex-col justify-between w-full gap-8 md:gap-0 md:items-center md:flex-row ">
+            <div className="flex flex-col items-center justify-between gap-10 md:flex-row">
               <Image
                 src={`/ecosystems/${titleCase(
                   challenge.ecosystem.toLowerCase()
@@ -81,32 +82,25 @@ function Page({ params }) {
                 </h1>
                 <div className="flex items-center justify-start gap-5">
                   <p
-                    className={`rounded-lg text-texts-important flex items-center font-bold text-xs font-orbitron`}
+                    className={`rounded-lg text-texts-important flex items-center font-bold text-[10px] md:text-xs font-orbitron`}
                   >
-                    <Clock
-                      className="inline-block mr-1 text-[#3B82F6]"
-                      size={16}
-                    />
+                    <Clock className="inline-block mr-1 text-[#3B82F6] w-[14px] h-[14px] md:w-[18px] md:h-[18px]" />
                     {challenge.timeLeft}
                   </p>
 
                   <p
-                    className={`rounded-lg text-texts-important flex items-center font-bold text-xs font-orbitron`}
+                    className={`rounded-lg text-texts-important flex items-center font-bold text-[10px] md:text-xs font-orbitron`}
                   >
-                    <Trophy
-                      className="inline-block mr-1 text-[#3B82F6]"
-                      size={16}
-                    />
+                    <Trophy className="inline-block mr-1 text-[#3B82F6] w-[14px] h-[14px] md:w-[18px] md:h-[18px]" />
+
                     {challenge.nftType}
                   </p>
 
                   <p
-                    className={`rounded-lg text-texts-important flex items-center font-bold text-xs font-orbitron`}
+                    className={`rounded-lg text-texts-important flex items-center font-bold text-[10px] md:text-xs font-orbitron`}
                   >
-                    <User
-                      className="inline-block mr-1 text-[#3B82F6]"
-                      size={16}
-                    />
+                    <User className="inline-block mr-1 text-[#3B82F6] w-[14px] h-[14px] md:w-[18px] md:h-[18px]" />
+
                     {`${challenge.players} players`}
                   </p>
                 </div>
@@ -115,14 +109,14 @@ function Page({ params }) {
 
             <Button
               variant="gradient"
-              className="px-10 py-1 text-lg font-medium h-fit font-orbitron text-texts-important"
+              className="px-10 py-1 text-lg font-medium w-fit h-fit font-orbitron text-texts-important"
             >
               Join Now
             </Button>
           </div>
 
-          <div className="flex justify-between gap-0 mt-14">
-            <div className="flex flex-col gap-16 w-full max-w-[70%]">
+          <div className="flex flex-col justify-between gap-4 md:gap-0 md:flex-row mt-14">
+            <div className="flex flex-col gap-8 md:gap-16 w-full md:max-w-[70%]">
               <p className="text-xl font-normal text-texts-input font-spaceGrotesk">
                 {challenge.description}
                 <span className="block mt-4">
@@ -152,7 +146,7 @@ function Page({ params }) {
               )}
             </div>
 
-            <div className="max-w-[25%]">
+            <div className="w-full md:max-w-[25%]">
               <h3 className="mb-6 text-xl font-semibold text-texts-important font-orbitron">
                 Similar Challenges
               </h3>
@@ -182,6 +176,8 @@ function Page({ params }) {
           </div>
         </div>
       </section>
+
+      <Footer />
     </div>
   );
 }
