@@ -6,6 +6,8 @@
 
 :root {
   --text-important: #e9e9e9;
+  --text-input: #bfbfbf;
+  --text-placeholder: #858894;
   --radius: 8px;
 }
 

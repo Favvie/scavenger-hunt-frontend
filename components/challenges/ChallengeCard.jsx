@@ -3,6 +3,8 @@ import clockIcon from "@/public/images/time-icon.svg";
 import trophyIcon from "@/public/images/trophy-icon.svg";
 import userIcon from "@/public/images/user-icon.svg";
 import arrowIcon from "@/public/images/arrow-right-icon.svg";
+import Button from "../ui/Button";
+import Link from "next/link";
 
 const ChallengeCard = ({
   title,
@@ -16,8 +18,14 @@ const ChallengeCard = ({
 }) => {
   return (
     <article className="w-full rounded-[10px] relative mx-h-[268.43px] transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-lg cursor-pointer">
-      <div className="w-full rounded relative">
-        <Image src={image} className="inset-0 w-full h-full" alt="card-image" />
+      <div className="relative w-full rounded">
+        <Image
+          src={image}
+          width={250}
+          height={222}
+          className="inset-0 w-full h-full"
+          alt="card-image"
+        />
         <div className="inset-0 w-full h-full bg-gradient-to-b from-[#00000047] to-[#090101c4] absolute" />
 
         <div className="w-full h-full inset-0 absolute px-[12px] py-[13px]">
@@ -137,9 +145,21 @@ const ChallengeCard = ({
             </div>
             <footer className="w-[30%]">
               <div className="w-[30%] absolute right-0 bottom-0 flex items-center justify-end">
-                <button className="bg-gradient-to-r from-[#7D3EAF] to-[#E7499F] w-[48.51px] py-[10px.21px] px-[15px] h-[34.64px] rounded-br-[10px]">
+                {/* <button className="bg-gradient-to-r from-[#7D3EAF] to-[#E7499F] w-[48.51px] py-[10px.21px] px-[15px] h-[34.64px] rounded-br-[10px]">
                   <Image className="m-auto" src={arrowIcon} alt="card-arrow" />
-                </button>
+                </button> */}
+                <Link href={`/challenges/${title}`}>
+                  <Button
+                    variant="gradient"
+                    className="w-[48.51px] py-[10px.21px] px-[15px] h-[34.64px] rounded-none rounded-br-[10px]"
+                  >
+                    <Image
+                      className="m-auto"
+                      src={arrowIcon}
+                      alt="card-arrow"
+                    />
+                  </Button>
+                </Link>
               </div>
             </footer>
           </section>

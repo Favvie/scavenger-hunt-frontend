@@ -16,6 +16,8 @@ module.exports = {
         blue: "#3B82F680",
         texts: {
           important: "var(--text-important)",
+          input: "var(--text-input)",
+          placeholder: "var(--text-placeholder)",
         },
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
