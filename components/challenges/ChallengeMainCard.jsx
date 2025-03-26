@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const ChallengeMainCard = ({
   title,
@@ -41,17 +42,17 @@ const ChallengeMainCard = ({
   };
   return (
     <article className="w-full md:w-[390px] md:h-[420px] h-[323px] rounded-[10px] overflow-hidden relative bg-pink-600 transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-lg cursor-pointer">
-      <div className="w-full h-full rounded relative">
+      <div className="relative w-full h-full rounded">
         <Image
           src={image}
           alt="card-image"
           fill
-          className="inset-0 w-full h-full object-cover"
+          className="inset-0 object-cover w-full h-full"
         />
         <div className="inset-0 w-full h-full bg-gradient-to-b from-[#00000047] to-[#090101c4] absolute" />
 
         <div className="w-full h-full inset-0 absolute px-[12px] py-[13px]">
-          <header className="w-full flex justify-between">
+          <header className="flex justify-between w-full">
             <div
               className={`w-[100px] h-[27px] rounded-[8px] gap-[13px] flex items-center justify-center bg-[#C0ECD4] bg-opacity-50 ${getStatusBorderColor(
                 status
@@ -62,7 +63,7 @@ const ChallengeMainCard = ({
                   status
                 )} `}
               />
-              <p className="text-white font-bold text-xs capitalize ">
+              <p className="text-xs font-bold text-white capitalize ">
                 {status}
               </p>
             </div>
@@ -82,9 +83,11 @@ const ChallengeMainCard = ({
               </p>
             </div>
           </header>
-          <section className="w-full bottom-0  left-0 absolute flex flex-col items-center justify-between ">
+          <section className="absolute bottom-0 left-0 flex flex-col items-center justify-between w-full ">
             <div className="w-full px-[12px]">
-              <h2 className="text-white font-bold text-[20px] Orbitron ">{title}</h2>
+              <h2 className="text-white font-bold text-[20px] Orbitron ">
+                {title}
+              </h2>
               <p className="text-[#BFBFBF] font-normal space-grotesk text-[14px]  my-2 w-[337px] pr-[22px]">
                 {description}
               </p>
@@ -93,8 +96,8 @@ const ChallengeMainCard = ({
               </button>
             </div>
             <section className="w-full px-8   mt-[14px]  relative">
-              <main className=" flex justify-between">
-                <div className=" w-auto flex items-center justify-center flex-col gap-3">
+              <main className="flex justify-between ">
+                <div className="flex flex-col items-center justify-center w-auto gap-3 ">
                   <div className="w-[33px] h-[33px] flex items-center justify-center rounded-sm bg-[#3B82F6] bg-opacity-50">
                     <Image
                       src="/images/time-icon.svg"
@@ -108,7 +111,7 @@ const ChallengeMainCard = ({
                     {timeLeft}
                   </p>
                 </div>
-                <div className=" w-auto flex items-center justify-center flex-col gap-3">
+                <div className="flex flex-col items-center justify-center w-auto gap-3 ">
                   <div className="w-[33px] h-[33px] flex items-center justify-center rounded-sm bg-[#3B82F6] bg-opacity-50">
                     <Image
                       src="/images/user-icon.svg"
@@ -122,7 +125,7 @@ const ChallengeMainCard = ({
                     {players}+ players
                   </p>
                 </div>
-                <div className=" w-auto flex items-center justify-center flex-col gap-3">
+                <div className="flex flex-col items-center justify-center w-auto gap-3 ">
                   <div className="w-[33px] h-[33px] flex items-center justify-center rounded-sm bg-[#3B82F6] bg-opacity-50">
                     <Image
                       src="/images/trophy-icon.svg"
@@ -139,16 +142,18 @@ const ChallengeMainCard = ({
               </main>
             </section>
 
-            <footer className=" w-full mt-1  ">
-              <div className="w-full  flex items-center justify-end">
+            <footer className="w-full mt-1 ">
+              <div className="flex items-center justify-end w-full">
                 <button className="bg-gradient-to-r from-[#7D3EAF] to-[#E7499F] w-[48.51px] py-[10px.21px] px-[15px] h-[34.64px] rounded-br-[10px]">
-                  <Image
-                    src="/images/arrow-right-icon.svg"
-                    alt="card-arrow"
-                    width={24}
-                    height={24}
-                    className="m-auto"
-                  />
+                  <Link href={`/challenges/${title}`}>
+                    <Image
+                      src="/images/arrow-right-icon.svg"
+                      alt="card-arrow"
+                      width={24}
+                      height={24}
+                      className="m-auto"
+                    />
+                  </Link>
                 </button>
               </div>
             </footer>

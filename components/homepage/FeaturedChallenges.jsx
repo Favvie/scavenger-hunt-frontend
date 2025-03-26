@@ -49,7 +49,7 @@ const FeatureChallenges = () => {
   return (
     <>
       <section className="w-full px-[24.88px] pt-[100px] lg:px-[116.91px] md:pt-[120px]">
-  <header className="w-full lg:flex items-center justify-between">
+  <header className="items-center justify-between w-full lg:flex">
     <div className="w-full lg:w-[70%] lg:flex lg:items-center lg:justify-start lg:gap-[55px]">
       <h2 className="font-medium font-orbitron text-wrap text-2xl text-center text-white lg:text-left md:text-[28px] lg:text-[32px]">
         Participate in ongoing <br />
@@ -69,7 +69,7 @@ const FeatureChallenges = () => {
   </header>
 
   <div className="w-full mt-[50px] flex items-stretch justify-between gap-[66px]">
-    <aside className="w-1/2 hidden lg:block">
+    <aside className="hidden w-1/2 lg:block">
       <ChallengeCard
         bigCard
         title="The Cryptic Key"
