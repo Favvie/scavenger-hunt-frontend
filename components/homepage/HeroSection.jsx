@@ -35,7 +35,7 @@ const HeroSection = () => {
       </div>
 
       {/* Hero Content */}
-      <div className="relative z-20 max-w-xl ml-6 md:ml-12">
+      <div className="relative z-20 max-w-xl ml-6 md:ml-12 space-grotesk">
         <h1 className="text-4xl font-bold tracking-wide text-left md:text-6xl">
           Master Blockchain
           <br />

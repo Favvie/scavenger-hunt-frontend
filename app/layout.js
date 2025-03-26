@@ -27,6 +27,7 @@ export default function RootLayout({ children }) {
       <body
         className={` ${spaceGrotesk.variable} ${orbitron.variable} antialiased`}
       >
+        <Navbar />
         {children}
       </body>
     </html>
