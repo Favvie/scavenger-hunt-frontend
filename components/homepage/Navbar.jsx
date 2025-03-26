@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { SelectWallet } from "../wallet/SelectWallet";
+import Button from "../ui/Button";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -18,7 +19,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="w-full fixed top-0 left-0 bg-transparent px-6 md:px-12 py-5 flex items-center justify-between z-50">
+    <nav className="fixed top-0 left-0 z-50 flex items-center justify-between w-full px-6 py-5 bg-transparent md:bg-black md:px-12">
       {/* Logo */}
       <Link href="/" className="flex items-center">
         <Image
@@ -30,25 +31,31 @@ const Navbar = () => {
       </Link>
 
       {/* Desktop Menu */}
-      <div className="hidden md:flex items-center space-x-12 text-lg text-white">
-        <Link href="#" className="hover:text-pink-500">
+      <div className="items-center hidden space-x-12 text-lg text-texts-important font-spaceGrotesk md:flex">
+        <Link href="#" className="font-medium hover:text-pink-500">
           Home
         </Link>
-        <Link href="#" className="hover:text-pink-500">
+        <Link href="#" className="font-medium hover:text-pink-500">
           About Us
         </Link>
-        <Link href="#" className="hover:text-pink-500">
+        <Link href="#" className="font-medium hover:text-pink-500">
           Contact Us
         </Link>
-        <Link href="#" className="hover:text-pink-500 mr-4">
-          Sign In
-        </Link>
-        <button
-          className="px-6 py-2 bg-[#d946ef] text-white rounded-lg hover:bg-[#c084fc] transition-all"
-          onClick={handleConnectWallet}
-        >
-          Connect Wallet
-        </button>
+        <div className="flex items-center space-x-5">
+          <Link
+            href="#"
+            className="bg-[#FD7DFF1A] flex justify-center font-orbitron font-bold py-2 rounded-lg mr-4 hover:text-pink-500 px-9 "
+          >
+            Sign In
+          </Link>
+          <Button
+            variant="gradient"
+            className="px-6 py-2 text-lg font-bold h-fit text-texts-important"
+            onClick={handleConnectWallet}
+          >
+            Connect Wallet
+          </Button>
+        </div>
       </div>
 
       {/* Mobile Menu Button */}
@@ -61,7 +68,7 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="absolute top-16 left-0 w-full bg-black bg-opacity-95 flex flex-col items-center space-y-4 p-6 md:hidden">
+        <div className="absolute left-0 flex flex-col items-center w-full p-6 space-y-4 bg-black top-16 bg-opacity-95 md:hidden">
           <Link href="#" className="text-lg text-white hover:text-pink-500">
             Home
           </Link>
@@ -71,15 +78,19 @@ const Navbar = () => {
           <Link href="#" className="text-lg text-white hover:text-pink-500">
             Contact Us
           </Link>
-          <Link href="#" className="text-lg text-white hover:text-pink-500">
+          <Link
+            href="/sign-in"
+            className="text-lg text-white hover:text-pink-500"
+          >
             Sign In
           </Link>
-          <button
-            className="w-full px-5 py-2 bg-[#d946ef] text-white rounded-lg hover:bg-[#c084fc] transition-all"
+          <Button
+            variant="gradient"
+            className="px-5 py-2 text-lg font-medium h-fit font-orbitron text-texts-important"
             onClick={handleConnectWallet}
           >
             Connect Wallet
-          </button>
+          </Button>
         </div>
       )}
 
