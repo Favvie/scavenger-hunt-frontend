@@ -10,7 +10,7 @@ const HeroSection = () => {
       {/* Background Image with gradient overlay for targeted darkening */}
       <div className="absolute inset-0 z-0 w-full h-full">
         {/* Custom gradient overlay - darker on left, lighter on right */}
-        <div className="absolute inset-0 z-10 bg-gradient-to-r from-black via-black/50 to-transparent"></div>
+        <div className="absolute inset-0 z-10 bg-gradient-to-r from-black via-black/50 to-transparent "></div>
 
         <Image
           src="/images/image2.png"

@@ -1,11 +1,19 @@
 import HeroSection from "@/components/homepage/HeroSection";
-import HowItWorks from "@/components/homepage/HowItWorks";
+import FeatureChallenges from "../components/homepage/FeaturedChallenges";
+import FeatureSection from "@/components/homepage/FeatureSection";
 
 export default function Home() {
   return (
-    <div>
-      <HeroSection />
-      <HowItWorks/> 
-    </div>
-  );
-}
+    <>
+      <div>
+        <HeroSection  />
+        
+        <FeatureSection />
+        <div className="w-full min-h-full bg-black pb-[40px]" >
+          <FeatureChallenges />
+        </div>
+      </div>
+
+
+    </>
+

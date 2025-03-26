@@ -78,7 +78,10 @@ const Navbar = () => {
           <Link href="#" className="text-lg text-white hover:text-pink-500">
             Contact Us
           </Link>
-          <Link href="#" className="text-lg text-white hover:text-pink-500">
+          <Link
+            href="/sign-in"
+            className="text-lg text-white hover:text-pink-500"
+          >
             Sign In
           </Link>
           <Button

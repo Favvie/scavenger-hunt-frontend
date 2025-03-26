@@ -11,11 +11,6 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={` antialiased`}>
-        {/* <img
-          src="/images/challenges-section-bg.png"
-          alt="Scavenger Hunt Challenges"
-          className="absolute inset-0 z-0"
-        /> */}
         <Navbar />
         {children}
       </body>
