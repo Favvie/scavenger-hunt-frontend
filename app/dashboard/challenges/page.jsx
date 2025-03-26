@@ -1,8 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import Image from "next/image";
-import ChallengeCard from "@/components/challenges/ChallengeCard"; // Updated import
-import ChallengeEnds from "@/components/challenges/ChallengeEnds";
+import ChallengeCard from "@/components/challenges/ChallengeCard"; 
 
 const page = () => {
   const [activeTab, setActiveTab] = useState("All");
