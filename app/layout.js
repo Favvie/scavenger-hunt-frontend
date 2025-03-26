@@ -2,7 +2,8 @@ import "./globals.css";
 
 import { Space_Grotesk, Orbitron } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components/homepage/Navbar";
+// import Navbar from "@/components/homepage/Navbar";
+// import Footer from "@/components/homepage/Footer";
 
 const spaceGrotesk = Space_Grotesk({
   weight: ["300", "400", "500", "600", "700"],
@@ -27,7 +28,6 @@ export default function RootLayout({ children }) {
       <body
         className={` ${spaceGrotesk.variable} ${orbitron.variable} antialiased`}
       >
-        <Navbar />
         {children}
       </body>
     </html>
