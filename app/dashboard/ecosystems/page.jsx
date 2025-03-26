@@ -53,7 +53,7 @@ const Page = () => {
             alt="ecosystem banner"
             width={600}
             height={300}
-            className="w-full h-full absolute inset-0 object-cover"
+            className="w-full h-full absolute inset-0 object-cover"  
           />
           <div className="bg-[#060B1CB2] z-20 absolute w-full h-full inset-0"></div>
           <div className="relative z-20">
