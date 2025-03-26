@@ -2,6 +2,7 @@ import { Users, Gamepad2, Code2, BookOpen, Trophy, Wallet } from 'lucide-react';
 import SubHeadingCenter from '@/components/SubHeadingCenter';
 import TextWithIcon from '@/components/TextWithIcon';
 import TargetAudienceCard from '@/components/TargetAudienceCard';
+import EcosystemCard from '@/components/EcosystemCard';
 
 const purposeAndGoals = [
     {
@@ -57,6 +58,29 @@ const targetAudience = [
     }
 ];
 
+const ecosystems = [
+    {
+        title: 'StarkNet',
+        description: 'Step into the future of Ethereum scaling through our interactive challenges and discover how to build, transact, and innovate on this groundbreaking platform.',
+        logo: '/images/starknet.png'
+    },
+    {
+        title: 'Stellar',
+        description: 'Step into the future of Ethereum scaling through our interactive challenges and discover how to build, transact, and innovate on this groundbreaking platform.',
+        logo: '/images/stellar.png'
+    },
+    {
+        title: 'Worldcoin',
+        description: 'Step into the future of Ethereum scaling through our interactive challenges and discover how to build, transact, and innovate on this groundbreaking platform.',
+        logo: '/images/worldcoin.png'
+    },
+    {
+        title: 'Web3',
+        description: 'Step into the future of Ethereum scaling through our interactive challenges and discover how to build, transact, and innovate on this groundbreaking platform.',
+        logo: '/images/web3.png'
+    }
+];
+
 const AboutUs = () => {
     return (
         <div className='px-4 py-40 min-h-screen bg-[#060B1C] md:px-8 lg:px-12'>
@@ -108,6 +132,20 @@ const AboutUs = () => {
                                 icon={item.icon}
                                 title={item.title}
                                 description={item.description}
+                            />
+                        ))}
+                    </div>
+                </section>
+
+                <section className='mb-16'>
+                    <SubHeadingCenter text='Our Supported Ecosystems' />
+                    <div className='grid grid-cols-1 gap-6 md:grid-cols-2'>
+                        {ecosystems.map((ecosystem, index) => (
+                            <EcosystemCard
+                                key={index}
+                                title={ecosystem.title}
+                                description={ecosystem.description}
+                                logo={ecosystem.logo}
                             />
                         ))}
                     </div>
