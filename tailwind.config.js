@@ -63,12 +63,14 @@ module.exports = {
           5: "hsl(var(--chart-5))",
         },
       },
+      sidebarBg: 'var(--sidebarbg)',
+			borderColor: 'var(--borderColor)',
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
       },
-    },
+  	},
   },
   plugins: [require("tailwindcss-animate")],
 };
