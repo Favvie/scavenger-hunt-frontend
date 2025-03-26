@@ -1,12 +1,20 @@
-const TextWithIcon = ({ icon: Icon, heading, text }) => {
+import Image from "next/image";
+
+const TextWithIcon = ({ icon, heading, text }) => {
   return (
     <div className="flex gap-4 items-start mb-6">
-      <div className="flex justify-center items-center w-12 h-12 rounded-full bg-purple-900/30">
-        <Icon className="w-6 h-6 text-purple-500" />
+      <div className="w-12 h-12">
+        <Image
+          src={icon}
+          alt={heading}
+          width={32}
+          height={32}
+          className="object-contain"
+        />
       </div>
       <div>
-        <h3 className="mb-2 text-xl font-medium text-white">{heading}</h3>
-        <p className="text-gray-400">{text}</p>
+        <h3 className="mb-2 text-[14px] font-spaceGrotesk font-[500] text-[#E9E9E9] md:text-[24px]">{heading}</h3>
+        {text && <p className="text-gray-400">{text}</p>}
       </div>
     </div>
   );
