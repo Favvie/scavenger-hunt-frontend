@@ -53,7 +53,7 @@ export function Navbar() {
   return (
     <>
       {/* Mobile Sidebar */}
-      <Sidebar isOpen={isSidebarOpen} setIsOpen={setIsSidebarOpen} />
+      {isSidebarOpen && <Sidebar isOpen={isSidebarOpen} setIsOpen={setIsSidebarOpen} />}
       
       <header className="sticky top-0 z-30 flex items-center justify-between py-4 px-4 md:px-6">
         {/* Left side - visible only on mobile */}
