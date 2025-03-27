@@ -100,15 +100,6 @@ const page = () => {
 
   return (
     <div className="w-full h-full mx-auto pt-4 relative overflow-y-auto">
-      <div className="absolute inset-0 w-full h-full z-0">
-        <Image
-          src="/images/challenges-section-bg.png"
-          alt="background"
-          fill
-          className="object-cover opacity-70"
-          priority
-        />
-      </div>
 
       <div className="relative z-10 px-4 md:px-8 lg:px-12 pb-16">
         <div className="mb-10 w-full relative rounded-lg overflow-hidden md:h-[16rem] h-[11.25rem] md:p-[2.5rem] p-4 opacity-90">
