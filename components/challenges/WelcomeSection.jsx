@@ -39,7 +39,7 @@ export default function WelcomeSection({ steps, username }) {
 	}, [currentIndex, isMobile]);
 
 	return (
-		<div className="rounded-3xl bg-gradient-to-r from-[#803FAF] to-[#E049A0] p-10">
+		<div className="rounded-3xl bg-gradient-to-r from-[#803FAF] to-[#E049A0] md:p-10 p-5">
 			<div className="mb-6">
 				<h2 className="text-2xl font-bold mb-2 font-spaceGrotesk">
 					<span className="px-2 py-1 rounded">Hi {username},</span> Welcome!
@@ -81,7 +81,6 @@ export default function WelcomeSection({ steps, username }) {
 
 				{/* Navigation buttons */}
 				<div className="flex justify-center mt-4">
-
 					{/* Dots indicator */}
 					<div className="flex space-x-2 items-center">
 						{steps.map((_, index) => (
@@ -92,9 +91,7 @@ export default function WelcomeSection({ steps, username }) {
 							/>
 						))}
 					</div>
-
 				</div>
-
 			</div>
 		</div>
 	);
