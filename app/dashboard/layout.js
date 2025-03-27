@@ -11,9 +11,9 @@ export default function DashboardLayout({children}) {
    return (
       <main className="bg-[#060B1C]">
         <Navbar />
-        <div className="flex h-screen overflow-hidden">
+        <div className="flex h-screen overflow-y-scroll">
             <Sidebar />
-            <div className="md:ml-60">
+            <div className="md:ml-60 flex-1  bg-[url('/images/challenges-section-bg.png')] bg-cover bg-no-repeat bg-center h-fit">
                 <main className="text-white px-5">{children}</main>
             </div>
         </div>
