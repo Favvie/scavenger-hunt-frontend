@@ -32,13 +32,13 @@ const Navbar = () => {
 
       {/* Desktop Menu */}
       <div className="items-center hidden space-x-12 text-lg text-texts-important font-spaceGrotesk md:flex">
-        <Link href="#" className="font-medium hover:text-pink-500">
+        <Link href="/" className="font-medium hover:text-pink-500">
           Home
         </Link>
-        <Link href="#" className="font-medium hover:text-pink-500">
+        <Link href="/about-us" className="font-medium hover:text-pink-500">
           About Us
         </Link>
-        <Link href="#" className="font-medium hover:text-pink-500">
+        <Link href="/contact-us" className="font-medium hover:text-pink-500">
           Contact Us
         </Link>
         <div className="flex items-center space-x-5">
